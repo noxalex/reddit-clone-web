@@ -18,6 +18,8 @@ type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
 const InputField: React.FC<InputFieldProps> = ({
   label,
   size: _,
+  // Input doesn't like type of that prop so we are not passing size
+  // and renaming unused variables to underscore
   ...props
 }) => {
   const [field, { error }] = useField(props);
